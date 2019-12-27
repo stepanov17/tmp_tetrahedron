@@ -39,10 +39,10 @@ function [res] = originInside(pt1, pt2, pt3, pt4)
 
     eps = 1.e-5;
 
-    chk1 = (s0 - s1 < eps);
-    chk2 = (s1 - s2 < eps);
-    chk3 = (s2 - s3 < eps);
-    chk4 = (s3 - s4 < eps);
+    chk1 = (abs(s0 - s1) < eps);
+    chk2 = (abs(s1 - s2) < eps);
+    chk3 = (abs(s2 - s3) < eps);
+    chk4 = (abs(s3 - s4) < eps);
 
     res = chk1 & chk2 & chk3 & chk4;
 
